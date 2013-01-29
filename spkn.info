@@ -22,25 +22,32 @@ base theme = zen
   ; You can also override any of Zen's stylesheets or any module's stylesheets,
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/263967 for more details.
-stylesheets[all][]   = css/html-reset.css
-stylesheets[all][]   = css/wireframes.css
-stylesheets[all][]   = css/layout-liquid.css
-stylesheets[all][]   = css/page-backgrounds.css
-stylesheets[all][]   = css/tabs.css
-stylesheets[all][]   = css/messages.css
-stylesheets[all][]   = css/pages.css
-stylesheets[all][]   = css/block-editing.css
-stylesheets[all][]   = css/blocks.css
-stylesheets[all][]   = css/navigation.css
-stylesheets[all][]   = css/panels-styles.css
-stylesheets[all][]   = css/views-styles.css
-stylesheets[all][]   = css/nodes.css
-stylesheets[all][]   = css/comments.css
-stylesheets[all][]   = css/forms.css
-stylesheets[all][]   = css/fields.css
-stylesheets[print][] = css/print.css
+  ; We want to inherit these stylesheets from the parent theme, so comment them out.
+; stylesheets[all][]   = css/html-reset.css
+;  stylesheets[all][]   = css/wireframes.css
+; stylesheets[all][]   = css/layout-liquid.css
+; stylesheets[all][]   = css/page-backgrounds.css
+; stylesheets[all][]   = css/tabs.css
+; stylesheets[all][]   = css/messages.css
+; stylesheets[all][]   = css/pages.css
+; stylesheets[all][]   = css/block-editing.css
+; stylesheets[all][]   = css/blocks.css
+; stylesheets[all][]   = css/navigation.css
+; stylesheets[all][]   = css/panels-styles.css
+; stylesheets[all][]   = css/views-styles.css
+; stylesheets[all][]   = css/nodes.css
+; stylesheets[all][]   = css/comments.css
+; stylesheets[all][]   = css/forms.css
+; stylesheets[all][]   = css/fields.css
+; stylesheets[print][] = css/print.css
 ; stylesheets[handheld][] = css/mobile.css
 ; stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
+
+
+; Override the following stylesheets
+stylesheets[all][]   = css/zen-liquid.css
+stylesheets[all][]   = css/style.css
+
 
   ; Set the conditional stylesheets that are processed by IE.
 conditional-stylesheets[if IE][all][]       = css/ie.css
@@ -48,6 +55,9 @@ conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
 
   ; Optionally add some JavaScripts to your theme.
 ; scripts[] = js/script.js
+  scripts[] = js/spkn.js
+  scripts[] = js/jquery.jcarousel.min.js
+
 
   ; The regions defined in Zen's default page.tpl.php file.  The name in
   ; brackets is the name of the variable in the page.tpl.php file, (e.g.
@@ -59,7 +69,6 @@ conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
 regions[sidebar_first]  = First sidebar
-regions[sidebar_second] = Second sidebar
 regions[navigation]     = Navigation bar
 regions[highlight]      = Highlighted content
 regions[content_top]    = Content top
@@ -67,6 +76,7 @@ regions[content_bottom] = Content bottom
 regions[header]         = Header
 regions[footer]         = Footer
 regions[page_closure]   = Page closure
+regions[search_site]    = Site Search
 
   ; Various page elements output by the theme can be toggled on and off. The
   ; "features" control which of these check boxes display on the
