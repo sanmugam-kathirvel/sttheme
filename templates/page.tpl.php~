@@ -214,15 +214,37 @@
 				</div>
 				<!-- Sidebar start -->
 				<div id="sidebar">
+					<div class='top'>
+					</div>
 					<?php print $sidebar_first; ?>
+					<div class='bottom'>
+					</div>
 				</div>
 				<!-- Sidebar end -->
 				<!-- footer start -->
 				 <?php if ($footer || $footer_message || $secondary_links): ?>
 					<div id="footer">
-						<?php if ($footer): ?>
-							<div class="feed-icons"><?php print $feed_icons; ?></div>
-						<?php endif; ?>
+						<div class="section">
+							<?php print theme(array('links__system_secondary_menu', 'links'), $secondary_links,
+								array(
+									'id' => 'secondary-menu',
+									'class' => 'links clearfix',
+								),
+								array(
+									'text' => t('Secondary menu'),
+									'level' => 'h2',
+									'class' => 'element-invisible',
+								));
+							?>
+
+							<?php if ($footer_message): ?>
+								<div id="footer-message">
+									<?php print $footer_message; ?>
+								</div>
+							<?php endif; ?>
+
+							<?php print $footer; ?>
+						</div>
 					</div>
 				<?php endif; ?>
 

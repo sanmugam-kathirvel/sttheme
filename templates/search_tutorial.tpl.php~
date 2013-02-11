@@ -11,7 +11,7 @@
 					$result = db_query($query);
 					while($row = db_fetch_object($result)){
 						echo "<li>";
-							echo "<img src='".base_path()."sites/default/files/foss/".$row->foss_category.".png'>";
+							echo "<img src='".base_path()."sites/default/files/foss/".$row->foss_category.".gif'>";
 							echo "<span class='element-invisible'>".$row->foss_category."</span>";
 						echo "</li>";
 					}

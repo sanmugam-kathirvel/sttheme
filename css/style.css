@@ -10,6 +10,70 @@ a {
 .element-invisible {
   display: none;
 }
+.noshadow {
+  webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
+  box-shadow: inset 0px 0px 0px 0px #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+  background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+  filter: none;
+  background-color: #ededed;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  color: #777777;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #ffffff;
+}
+/* botton */
+input[type="text"], input[type="password"], input[type="textarea"] {
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid #ada9a5;
+  padding: 3px 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+input[type="submit"] {
+  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+  background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+  background-color: #ededed;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  color: #777777;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #ffffff;
+}
+input[type="submit"]:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+  background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+  background-color: #dfdfdf;
+}
+input[type="submit"]:active {
+  position: relative;
+  top: 1px;
+}
+/* block */
 .block h2.title {
   color: #666;
   font-size: 18px;
@@ -119,6 +183,24 @@ a {
   border: 1px solid #666;
 }
 #header #navigation-search #search .content .container-inline .form-submit {
+  webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
+  box-shadow: inset 0px 0px 0px 0px #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+  background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+  filter: none;
+  background-color: #ededed;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  color: #777777;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #ffffff;
   border: 0px;
   padding: 0px;
   margin: 0px;
@@ -147,7 +229,7 @@ a {
   position: relative;
 }
 #main-content #search_tutorial .carousel, #main-content #search_tutorial .carousel-2 {
-  width: 700px;
+  width: 720px;
   padding-top: 10px;
 }
 #main-content #search_tutorial .carousel ul li, #main-content #search_tutorial .carousel-2 ul li {
@@ -155,18 +237,35 @@ a {
   height: 30px;
 }
 #main-content #search_tutorial .carousel ul li {
+  width: 125px;
   height: 50px;
 }
 #main-content #search_tutorial form {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 61px;
   position: absolute;
-  top: 10px;
+  top: 35px;
   right: 5px;
 }
+#main-content #search_tutorial form input[type="submit"] {
+  position: relative;
+  background: url('../images/search.png') no-repeat;
+  background-position: 1px;
+  padding: 0;
+  border: 0;
+  text-indent: -999em;
+  height: 61px;
+  width: 60px;
+}
 #sidebar {
-  width: 200px;
+  width: 220px;
   float: right;
+}
+#sidebar div.region-sidebar-first {
+  width: 220px;
+}
+#sidebar div.section {
+  margin: 0px;
 }
 .featured-videos {
   width: 800px;
@@ -242,46 +341,49 @@ a {
   padding-top: 4px;
 }
 .jcarousel-container-horizontal .jcarousel-prev {
-  width: 19px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   left: 0;
   top: 0px;
   position: absolute;
-  background: url("../images/left-right-arrow.png");
-  background-position: 0 0;
+  background: url("../images/foss-left-right-arrow.png");
+  background-position: 0 -14px;
 }
 .jcarousel-container-horizontal .jcarousel-prev.jcarousel-prev-disabled {
-  background-position: -20px 0;
+  background-position: 0px -14px;
 }
 .jcarousel-container-horizontal .jcarousel-next {
-  width: 19px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   right: 0;
   top: 0px;
   position: absolute;
-  background: url("../images/left-right-arrow.png");
-  background-position: -61px 0;
+  background: url("../images/foss-left-right-arrow.png");
+  background-position: -31px -14px;
 }
 .jcarousel-container-horizontal .jcarousel-next.jcarousel-next-disabled {
-  background-position: -41px 0;
+  background-position: -31px -14px;
 }
 div.carousel .jcarousel-container-horizontal .jcarousel-prev {
-  width: 19px;
+  width: 30px;
   height: 50px;
   background: url("../images/foss-left-right-arrow.png");
   background-position: 0 0;
 }
 div.carousel .jcarousel-container-horizontal .jcarousel-prev.jcarousel-prev-disabled {
-  background-position: -20px 0;
+  background-position: 0px 0;
 }
 div.carousel .jcarousel-container-horizontal .jcarousel-next {
-  width: 19px;
+  width: 30px;
   height: 50px;
   position: absolute;
   background: url("../images/foss-left-right-arrow.png");
-  background-position: -61px 0;
+  background-position: -31px 0;
 }
 div.carousel .jcarousel-container-horizontal .jcarousel-next.jcarousel-next-disabled {
-  background-position: -41px 0;
+  background-position: -31px 0;
 }
 /* forms */
+#user-login-form .form-item input {
+  width: 160px;
+}
