@@ -214,11 +214,7 @@
 				</div>
 				<!-- Sidebar start -->
 				<div id="sidebar">
-					<div class='top'>
-					</div>
 					<?php print $sidebar_first; ?>
-					<div class='bottom'>
-					</div>
 				</div>
 				<!-- Sidebar end -->
 				<!-- footer start -->

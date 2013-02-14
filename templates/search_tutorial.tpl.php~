@@ -1,5 +1,5 @@
 <div id="search_tutorial">
-	<form name="input" action="test" method="get" id='search-home-tutorials'>
+	<form name="input" action="<?php echo $GLOBALS['base_path']; ?>list_videos" method="post" id='search-home-tutorials'>
 		<input type="hidden" name="foss" id='search-home-tutorials-foss' value=''>
 		<input type="hidden" name="language" id='search-home-tutorials-language' value=''>
 		<input type="submit" value="Go" class="search-tutorial-submit" >
@@ -13,6 +13,7 @@
 						echo "<li>";
 							echo "<img src='".base_path()."sites/default/files/foss/".$row->foss_category.".gif'>";
 							echo "<span class='element-invisible'>".$row->foss_category."</span>";
+							echo "<div class='selected'></div>";
 						echo "</li>";
 					}
 				?>
@@ -27,6 +28,7 @@
 						echo "<li>";
 							echo "<img src='".base_path()."sites/default/files/lang/".$row->language.".png'>";
 							echo "<span class='element-invisible'>".$row->language."</span>";
+							echo "<div class='selected'></div>";
 						echo "</li>";
 					}
 				?>

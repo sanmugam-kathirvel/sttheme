@@ -3,13 +3,29 @@
 body{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	color: black;
+	/* background:url('../images/bkg.png') repeat; */
+	background:url('../images/bg_img.png') repeat;
+}
+#page{
+	/* background:url('../images/bg_img.png') repeat; */
+}
+.form-required {
+	color: #CC0000;
+	font-size: 8px;
 }
 a{
 	text-decoration: none;
 	color: #B84A01;
 }
-.element-invisible{
+.element-invisible, div.grippie{
 	display: none;
+}
+
+h1.title{
+	font-size: 18px;
+	color: #666;
+	font-weight: normal;
+	padding: 10px;
 }
 
 .rounded-corners (@radius: 4px) {
@@ -43,13 +59,21 @@ a{
 }
 
 /* botton */
-input[type="text"], input[type="password"],input[type="textarea"]{
+input[type="text"], input[type="password"],input[type="textarea"], .resizable-textarea textarea{
 	padding: 0px;
 	margin: 0px;
 	border: 1px solid #ada9a5;
 	padding: 3px 5px;
 	.rounded-corners;
 }
+html.js .resizable-textarea{
+	div.grippie{
+		margin-left:200px;
+	}
+	textarea{
+		width: 220px;
+	}
+} 
 input[type="submit"] {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -82,9 +106,158 @@ input[type="submit"]:active {
 	top:1px;
 }
 
+/* tables */
+th, thead th, tbody th{
+	padding: 0 5px;
+}
+table{
+	width: 100%;
+	tr{	
+		border: 0px;
+		td{
+			font-size: 12px;
+			padding: 8px 0;
+		}
+	}
+	tr.odd{
+		background-color: #f8f8f8;
+		border: 0px;
+	}
+	tr.even{
+		background-color: #ffffff;
+		border: 0px;
+	}
+}
+
+/* tabs */
+.tabs{
+	ul.primary{
+		border: 0px;
+		overflow: hidden;
+		padding: 0;
+		li{	
+			float: left;
+			background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+			background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+			background-color:#ededed;
+			color:#777777;
+			font-family:arial;
+			font-size:15px;
+			font-weight:bold;
+			padding:6px 8px;
+			text-decoration:none;
+			text-shadow:1px 1px 0px #ffffff;
+			a{
+				background: none !important;
+				border:0;
+				margin:0;
+				padding: 0;
+			}
+		}
+		li:hover {
+			/* background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+			background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed'); */
+			background-color:#dfdfdf;
+
+		}
+		li.active {
+			/* -moz-border-radius:6px;
+			-webkit-border-radius:6px;
+			border-radius:6px;
+			border:1px solid #dcdcdc; */
+			background-color:#fff;
+		}
+	}
+}
+
+/* pager */
+
+div.item-list{
+	ul.pager{
+		overflow: hidden;
+		li{
+			background:url('../images/pager.png') no-repeat;
+			width: 34px;
+			height: 36px;
+			float: left;
+			padding: 0px;
+			margin: 0 2px;
+			a{
+				display: block;
+			}
+		}
+		li.pager-first, li.pager-previous{
+			background-position: 0px 0px;
+			width: 75px;
+		}
+		li.pager-ellipsis, li.pager-item{
+			background-position: -114px 0px;
+		
+		}
+		li.pager-current{
+			background-position: -77px 0px;
+			line-height: 34px;
+		}
+		li.pager-next, li.pager-last{
+			background-position: -150px 0px;
+			width: 75px;
+		}
+		
+	}
+}
+/* forms */
+.workshop-form, .stupload-form{
+	padding-left: 10px;
+	overflow: hidden;
+	width: 770px;
+	form{
+		.form-item{
+			width: 760px;
+			clear: both;
+			overflow: hidden;
+			label{
+				float: left;
+				width: 280px;
+				padding-right: 20px;
+				color: #666;
+				font-weight: normal;
+			}
+			input{
+				float: left;
+			}
+		}
+		input[type="text"], input[type="password"],input[type="textarea"], .resizable-textarea textarea{
+			width: 250px;
+		}
+		input[type="submit"]{
+			clear: both;
+			margin-left: 300px;
+		}
+		select{
+			min-width: 260px;
+		}
+		.selected-info{
+			margin-bottom: 15px;
+			width: 760px;
+			overflow: hidden;
+			h3{
+				font-size: 14px;
+				margin: 5px 0;
+				color: #666;
+				width: 300px;
+				float: left;
+				color: #666;
+				font-weight: normal;
+			}
+		}
+	}
+}
 
 /* block */
 .block{
+	margin-bottom: 6px;
 	h2.title{
 		color: #666;
 		font-size: 18px;
@@ -117,11 +290,12 @@ input[type="submit"]:active {
 	}
 }
 #master-head{
-	width: 800px;
+	width: 780px;
 	clear: both;
 }
 #header{
-	width: 1024px;
+	width: 1004px;
+	padding: 0 10px;
 	height: 81px;
 	overflow: hidden;
 	background:url('../images/banner-bg.png') no-repeat;
@@ -129,10 +303,10 @@ input[type="submit"]:active {
 		float: left;
 		width: 400px;
 		#logo{
-			width: 88px;
+			width: 80px;
 			height: 83px;
 			img{
-				padding: 5px 0 0 10px;
+				padding: 5px 0 0 0px;
 			}
 		}
 	}
@@ -141,7 +315,7 @@ input[type="submit"]:active {
 		overflow: hidden;
 		width: 505px;
 		#navigation{
-			margin-top: 8px;
+			/* margin-top: 8px; */
 			width: 505px;
 			height: 32px;
 			/* background:url('../images/nav-bg.png') no-repeat; */
@@ -150,12 +324,12 @@ input[type="submit"]:active {
 					float: left;
 					padding: 0 8px;
 					a{
-						color: white;
+						color: #B84A01;
 						line-height: 32px;
 						display: block;
 					}
 					a.hover{
-						font-weight: bold;
+						font-weight: normal;
 					}
 				}
 				li.active-trail{
@@ -170,10 +344,10 @@ input[type="submit"]:active {
 			height: 29px;
 			width: 186px;
 			float: right;
-			margin-top: 6px;
+			margin-top: 14px;
 			/* todo ie7 clear both problem */
 			*margin-top: 44px;
-			margin-right: 35px;
+			margin-right: 10px;
 			h2{
 				display: none;
 			}
@@ -193,7 +367,7 @@ input[type="submit"]:active {
 							height: 20px;
 							line-height: 20px;
 							width: 145px;
-							color: white;
+							color: #000000;
 							padding: 2px 25px 2px 5px;
 							margin-right: 20px;
 							border: 1px solid #666;
@@ -224,20 +398,31 @@ input[type="submit"]:active {
 }
 
 #main-content{
-	width: 800px;
+	width: 790px;
+	padding-left: 10px;
 	float: left;
 	overflow: hidden;
 	#search_tutorial{
-		width: 800px;
+		width: 780px;
 		overflow: hidden;
 		position: relative;
 		.carousel, .carousel-2{
 			width: 720px;
-			padding-top: 10px;
+			padding: 10px 0;
 			ul{
 				li{
-					width: 100px;
+					width: 125px;
 					height: 30px;
+					position: relative;
+					div.selected{
+						width: 126px;
+						height: 30px;
+						background:url('../images/lang-selected.png') no-repeat;
+						top: 4px;
+						left: 2px;
+						position: absolute;
+						display: none;
+					}
 				}
 			}
 		}
@@ -246,6 +431,16 @@ input[type="submit"]:active {
 				li{
 					width: 125px;
 					height: 50px;
+					position: relative;
+					div.selected{
+						width: 126px;
+						height: 50px;
+						background:url('../images/foss-selected.png') no-repeat;
+						top: 4px;
+						left: 2px;
+						position: absolute;
+						display: none;
+					}
 				}
 			}
 			.jcarousel-prev{
@@ -254,8 +449,8 @@ input[type="submit"]:active {
 		.carousel-2{
 		}
 		form{
-			width: 60px;
-			height: 61px;
+			width: 45px;
+			height: 46px;
 			position: absolute;
 			top: 35px;
 			right: 5px;
@@ -276,18 +471,32 @@ input[type="submit"]:active {
 #sidebar{
 	width: 220px;
 	float: right;
+	margin-top: 10px;
 	div.region-sidebar-first{
 		width: 220px;
 	}
 	div.section{
 		margin: 0px;
 	}
+	div.top{
+		padding-top: 7px;
+		background:url('../images/sidebar-top-bg.png') no-repeat;
+	}
+	div.bottom{
+		padding-top: 7px;
+		background:url('../images/sidebar-bottom-bg.png') no-repeat;
+	}
+	div.middle{
+		background:url('../images/sidebar-center-bg.png') repeat-y;
+		padding: 10px;
+	}
 }
 
 .featured-videos{
-	width: 800px;
+	width: 780px;
 	height: 150px;
 	clear: both;
+	padding: 5px 0;
 	h2{
 		width: 40px;
 		float: left;
@@ -295,15 +504,15 @@ input[type="submit"]:active {
 	}
 	div.content{
 		float: left;
-		width: 740px;
+		width: 730px;
 		ul{
-			width: 740px;
+			width: 720px;
 			overflow: hidden;
 			li{
 				background-image: none !important;
 				padding: 0px;
 				float: left;
-				width: 370px;
+				width: 360px;
 				padding: 15px 0;
 				img{
 					width: 150px;
@@ -311,7 +520,7 @@ input[type="submit"]:active {
 					padding-right: 5px;
 				}
 				div.con{
-					width: 215px;
+					width: 205px;
 					float: left;
 					p.foss, p.lang{
 						font-size: 12px;

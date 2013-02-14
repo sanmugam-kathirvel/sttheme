@@ -19,16 +19,26 @@ function mycarousel_initCallback(carousel)
 jQuery(document).ready(function() {
 	$('.search-foss li').click(function(){
 		$('#search-home-tutorials-foss').val($(this).text());
-		alert($(this).text());
+		//alert($(this).text());
+		$('.search-foss li div.selected').css({'display': 'none'});
+		$(this).children('div').css({'display': 'block'});
 	});
 	$('.search-lang li').click(function(){
 		$('#search-home-tutorials-language').val($(this).text());
-		alert($(this).text());
+		//alert($(this).text());
+		$('.search-lang li div.selected').css({'display': 'none'});
+		$(this).children('div').css({'display': 'block'});
+	});
+	// side nav bar drop down
+	$('#main-menu li a').hover(function(){
+		$(this).addClass('hover');
+	}, function(){
+		$(this).removeClass('hover');
 	});
     $('.jcarousel').jcarousel({
-        //auto: 3,
-        //wrap: 'last',
-        //initCallback: mycarousel_initCallback
+        auto: 3,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
     });
    
    /*
@@ -37,6 +47,9 @@ jQuery(document).ready(function() {
 	    classBlur:  "placeholder",
 	});
  */
+ 
+	$ ('.block .content ul li:even').addClass('even');
+	$ ('.block .content ul li:odd').addClass('odd');
 });
 
 /* add menu hover state */
