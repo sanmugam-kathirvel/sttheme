@@ -6,10 +6,14 @@ body{
 }
 #page{
 	/* background:url('../images/bg_img.png') repeat; */
+	background: white;
 }
 .form-required {
 	color: #CC0000;
 	font-size: 8px;
+}
+.rich-text{
+	font-size: 14px;
 }
 a{
 	text-decoration: none;
@@ -24,6 +28,12 @@ h1.title{
 	color: #666;
 	font-weight: normal;
 	padding: 10px;
+}
+
+h2.sub-title{
+	font-size: 16px;
+	color: #666;
+	font-weight: normal;
 }
 
 .rounded-corners (@radius: 4px) {
@@ -107,13 +117,30 @@ input[type="submit"]:active {
 /* tables */
 th, thead th, tbody th{
 	padding: 0 5px;
+	border:0px;
+	font-weight: normal;
 }
-a.view-record, a.edit-record{
+form th, form thead th{
+	border: none;
+}
+form tbody{
+	border: none;
+}
+table.pre-request{
+	margin: 0px;
+	margin-left: 20px;
+}
+table.tutorial-comments{
+	margin: 0px;
+	margin-left: 10px;
+}
+
+a.view-record, a.edit-record, a.confirm-record{
 	width: 20px;
 	height: 20px;
 	display: block;
 	float: left;
-	margin: 0 2px;
+	/* margin: 0 2px; */
 	text-indent: -999em;
 }
 a.view-record{
@@ -122,18 +149,24 @@ a.view-record{
 a.edit-record{
 	background:url('../images/edit.png') no-repeat;
 }
+a.confirm-record{
+	background:url('../images/confirm.png') no-repeat;
+}
 
 table{
 	width: 100%;
 	tr{	
 		border: 0px;
-		td{
+		td,th{
 			font-size: 12px;
-			line-height: 32px;
+			padding: 8px 3px;
 			vertical-align: middle;
 			a{
 				/* display: block; */
 			}
+		}
+		th{
+			font-size: 14px;
 		}
 	}
 	tr.odd{
@@ -271,6 +304,166 @@ div.item-list{
 				font-weight: normal;
 			}
 		}
+	}
+}
+
+.list_videos{
+ 	.tutorial-list-search{
+		overflow: hidden;
+		width: 666px;
+		margin: auto;
+		div.form-item{
+			float: left;
+			padding: 0 5px;
+			margin: 0px;
+			line-height: 38px;
+		}
+	}
+	.list_data{
+		td{
+			vertical-align: middle;
+			img{
+				float: left;
+				width: 150px;
+			}
+			div.con{
+				width: 200px;
+				padding-left: 10px;
+				float: left;
+				p{
+					margin: 0px;
+				}
+				p.foss, p.lang{
+					font-size: 12px;
+					color: #666;
+				}color
+				p.tname, p.tname a{
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+.download-title{
+	float: left;
+	padding-right: 10px;
+	h1{
+		padding: 0px;
+	}
+}
+.download-links{
+	float: left;
+	padding: 5px 0;
+}
+table.empty-message{
+	margin-left: 20px;
+}
+.tutorial-view-page{
+	padding-left: 10px;
+	.back-search{
+		width: 100%;
+		a{
+			float: right;
+			padding-right: 20px;
+		}
+	}
+	td{
+		textarea{
+			margin-left: 20px;
+			height: auto;
+			resize: none;
+		}
+		h1{
+			padding: 0 0 10px 10px;
+		}
+	}
+}
+div.workshop-form{
+	div.date-and-time{
+		overflow: hidden;
+		width: 760px;
+		label{
+			float: left;
+			width: 280px;
+			padding-right: 20px;
+			color: #666;
+			font-weight: normal;
+			margin: 0;
+		}
+		.form-item{
+			margin: 0;
+			float: left;
+			width: 110px;
+			clear: none !important;
+			select{
+				min-width: 100px;
+			}
+		}
+		span.timedivi{
+			float: left;
+			margin-right: 4px;
+			font-weight: bold;
+			line-height: 24px;
+		}
+		
+	}
+}
+
+.skype-request{
+	.form-radios{
+		float: left;
+		width: 260px;
+		margin: 0px;
+		div.form-item{
+			margin: 0;
+			float: left;
+			width: 60px;
+			clear: none !important;
+		}
+	}
+}
+
+div.academic_details div.workshop-form form{
+	width:420px;
+	margin: auto;
+	overflow: hidden;
+	div.form-item{
+		clear: none !important;
+		float: left;
+		width:270px;
+		margin: 10px 0;
+		select{
+			width: 270px;
+		}
+	}
+	input[type="submit"]{
+		margin: 5px;
+		margin-left:20px;
+	}
+}
+
+div.comment-form{
+	.form-item{
+		width: 760px;
+		clear: both;
+		overflow: hidden;
+		label{
+			float: left;
+			width: 280px;
+			padding-right: 20px;
+			color: #666;
+			font-weight: normal;
+		}
+		input{
+			float: left;
+		}
+		input[type="textarea"]{
+			width: 300px;
+		}
+	}
+	input[type="submit"]{
+		clear: both;
+		margin-left: 300px;
 	}
 }
 
@@ -671,4 +864,12 @@ div.carousel{
 	}
 }
 
+/* upload interface */
 
+.update{
+	form{
+		input[type="submit"]{
+			margin: 0px;
+		}
+	}
+}

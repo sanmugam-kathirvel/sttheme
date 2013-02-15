@@ -2,7 +2,7 @@
 	<form name="input" action="<?php echo $GLOBALS['base_path']; ?>list_videos" method="post" id='search-home-tutorials'>
 		<input type="hidden" name="foss" id='search-home-tutorials-foss' value=''>
 		<input type="hidden" name="language" id='search-home-tutorials-language' value=''>
-		<input type="submit" value="Go" class="search-tutorial-submit" >
+		<input type="submit" value="Go" class="search-tutorial-submit" title="Search Tutorial" >
 	</form>
 		<div class='carousel'>
 			<ul id='jcarousel' class="jcarousel search-foss">
@@ -11,7 +11,7 @@
 					$result = db_query($query);
 					while($row = db_fetch_object($result)){
 						echo "<li>";
-							echo "<img src='".base_path()."sites/default/files/foss/".$row->foss_category.".gif' title='jjjj'>";
+							echo "<img src='".base_path()."sites/default/files/foss/".$row->foss_category.".gif' title='".human_text($row->foss_category)."'>";
 							echo "<span class='element-invisible'>".$row->foss_category."</span>";
 							echo "<div class='selected'></div>";
 						echo "</li>";
@@ -26,7 +26,7 @@
 					$result = db_query($query);
 					while($row = db_fetch_object($result)){
 						echo "<li>";
-							echo "<img src='".base_path()."sites/default/files/lang/".$row->language.".png'>";
+							echo "<img src='".base_path()."sites/default/files/lang/".$row->language.".png' title='".human_text($row->language)."'>";
 							echo "<span class='element-invisible'>".$row->language."</span>";
 							echo "<div class='selected'></div>";
 						echo "</li>";

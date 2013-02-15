@@ -50,8 +50,8 @@ jQuery(document).ready(function() {
 	});
  */
  
-	$ ('.block .content ul li:even').addClass('even');
-	$ ('.block .content ul li:odd').addClass('odd');
+	$ ('.block .content ul li:even, .pre-request tr:even').addClass('even');
+	$ ('.block .content ul li:odd, .pre-request tr:odd').addClass('odd');
 });
 
 /* add menu hover state */

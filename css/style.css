@@ -7,10 +7,14 @@ body {
 #page {
   /* background:url('../images/bg_img.png') repeat; */
 
+  background: white;
 }
 .form-required {
   color: #CC0000;
   font-size: 8px;
+}
+.rich-text {
+  font-size: 14px;
 }
 a {
   text-decoration: none;
@@ -24,6 +28,11 @@ h1.title {
   color: #666;
   font-weight: normal;
   padding: 10px;
+}
+h2.sub-title {
+  font-size: 16px;
+  color: #666;
+  font-weight: normal;
 }
 .noshadow {
   webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
@@ -100,13 +109,30 @@ input[type="submit"]:active {
 /* tables */
 th, thead th, tbody th {
   padding: 0 5px;
+  border: 0px;
+  font-weight: normal;
 }
-a.view-record, a.edit-record {
+form th, form thead th {
+  border: none;
+}
+form tbody {
+  border: none;
+}
+table.pre-request {
+  margin: 0px;
+  margin-left: 20px;
+}
+table.tutorial-comments {
+  margin: 0px;
+  margin-left: 10px;
+}
+a.view-record, a.edit-record, a.confirm-record {
   width: 20px;
   height: 20px;
   display: block;
   float: left;
-  margin: 0 2px;
+  /* margin: 0 2px; */
+
   text-indent: -999em;
 }
 a.view-record {
@@ -115,20 +141,26 @@ a.view-record {
 a.edit-record {
   background: url('../images/edit.png') no-repeat;
 }
+a.confirm-record {
+  background: url('../images/confirm.png') no-repeat;
+}
 table {
   width: 100%;
 }
 table tr {
   border: 0px;
 }
-table tr td {
+table tr td, table tr th {
   font-size: 12px;
-  line-height: 32px;
+  padding: 8px 3px;
   vertical-align: middle;
 }
-table tr td a {
+table tr td a, table tr th a {
   /* display: block; */
 
+}
+table tr th {
+  font-size: 14px;
 }
 table tr.odd {
   background-color: #f8f8f8;
@@ -262,6 +294,149 @@ div.item-list ul.pager li.pager-next, div.item-list ul.pager li.pager-last {
   float: left;
   color: #666;
   font-weight: normal;
+}
+.list_videos .tutorial-list-search {
+  overflow: hidden;
+  width: 666px;
+  margin: auto;
+}
+.list_videos .tutorial-list-search div.form-item {
+  float: left;
+  padding: 0 5px;
+  margin: 0px;
+  line-height: 38px;
+}
+.list_videos .list_data td {
+  vertical-align: middle;
+}
+.list_videos .list_data td img {
+  float: left;
+  width: 150px;
+}
+.list_videos .list_data td div.con {
+  width: 200px;
+  padding-left: 10px;
+  float: left;
+}
+.list_videos .list_data td div.con p {
+  margin: 0px;
+}
+.list_videos .list_data td div.con p.foss, .list_videos .list_data td div.con p.lang {
+  font-size: 12px;
+  color: #666;
+}
+.list_videos .list_data td div.con colorp.tname, .list_videos .list_data td div.con p.tname a {
+  font-size: 16px;
+}
+.download-title {
+  float: left;
+  padding-right: 10px;
+}
+.download-title h1 {
+  padding: 0px;
+}
+.download-links {
+  float: left;
+  padding: 5px 0;
+}
+table.empty-message {
+  margin-left: 20px;
+}
+.tutorial-view-page {
+  padding-left: 10px;
+}
+.tutorial-view-page .back-search {
+  width: 100%;
+}
+.tutorial-view-page .back-search a {
+  float: right;
+  padding-right: 20px;
+}
+.tutorial-view-page td textarea {
+  margin-left: 20px;
+  height: auto;
+  resize: none;
+}
+.tutorial-view-page td h1 {
+  padding: 0 0 10px 10px;
+}
+div.workshop-form div.date-and-time {
+  overflow: hidden;
+  width: 760px;
+}
+div.workshop-form div.date-and-time label {
+  float: left;
+  width: 280px;
+  padding-right: 20px;
+  color: #666;
+  font-weight: normal;
+  margin: 0;
+}
+div.workshop-form div.date-and-time .form-item {
+  margin: 0;
+  float: left;
+  width: 110px;
+  clear: none !important;
+}
+div.workshop-form div.date-and-time .form-item select {
+  min-width: 100px;
+}
+div.workshop-form div.date-and-time span.timedivi {
+  float: left;
+  margin-right: 4px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.skype-request .form-radios {
+  float: left;
+  width: 260px;
+  margin: 0px;
+}
+.skype-request .form-radios div.form-item {
+  margin: 0;
+  float: left;
+  width: 60px;
+  clear: none !important;
+}
+div.academic_details div.workshop-form form {
+  width: 420px;
+  margin: auto;
+  overflow: hidden;
+}
+div.academic_details div.workshop-form form div.form-item {
+  clear: none !important;
+  float: left;
+  width: 270px;
+  margin: 10px 0;
+}
+div.academic_details div.workshop-form form div.form-item select {
+  width: 270px;
+}
+div.academic_details div.workshop-form form input[type="submit"] {
+  margin: 5px;
+  margin-left: 20px;
+}
+div.comment-form .form-item {
+  width: 760px;
+  clear: both;
+  overflow: hidden;
+}
+div.comment-form .form-item label {
+  float: left;
+  width: 280px;
+  padding-right: 20px;
+  color: #666;
+  font-weight: normal;
+}
+div.comment-form .form-item input {
+  float: left;
+}
+div.comment-form .form-item input[type="textarea"] {
+  width: 300px;
+}
+div.comment-form input[type="submit"] {
+  clear: both;
+  margin-left: 300px;
 }
 /* block */
 .block {
@@ -632,4 +807,8 @@ div.carousel .jcarousel-container-horizontal .jcarousel-next.jcarousel-next-disa
 /* forms */
 #user-login-form .form-item input {
   width: 160px;
+}
+/* upload interface */
+.update form input[type="submit"] {
+  margin: 0px;
 }
