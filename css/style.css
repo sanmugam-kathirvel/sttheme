@@ -2,8 +2,6 @@
 body {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   color: black;
-  /* background:url('../images/bkg.png') repeat; */
-
   background: url('../images/bg_img.png') repeat;
 }
 #page {
@@ -103,6 +101,20 @@ input[type="submit"]:active {
 th, thead th, tbody th {
   padding: 0 5px;
 }
+a.view-record, a.edit-record {
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin: 0 2px;
+  text-indent: -999em;
+}
+a.view-record {
+  background: url('../images/view.png') no-repeat;
+}
+a.edit-record {
+  background: url('../images/edit.png') no-repeat;
+}
 table {
   width: 100%;
 }
@@ -111,7 +123,12 @@ table tr {
 }
 table tr td {
   font-size: 12px;
-  padding: 8px 0;
+  line-height: 32px;
+  vertical-align: middle;
+}
+table tr td a {
+  /* display: block; */
+
 }
 table tr.odd {
   background-color: #f8f8f8;
@@ -176,6 +193,8 @@ div.item-list ul.pager li {
 }
 div.item-list ul.pager li a {
   display: block;
+  padding: 0px;
+  line-height: 33px;
 }
 div.item-list ul.pager li.pager-first, div.item-list ul.pager li.pager-previous {
   background-position: 0px 0px;
@@ -253,13 +272,16 @@ div.item-list ul.pager li.pager-next, div.item-list ul.pager li.pager-last {
   font-size: 18px;
   font-weight: normal;
 }
+.block a {
+  font-size: 13px;
+}
 .block .content ul {
   padding: 0px;
   margin: 0px;
 }
 .block .content ul li {
   background: url('../images/arr.png') no-repeat;
-  background-position: 5px 5px;
+  background-position: 5px 7px;
   list-style: none;
   padding: 1px 0;
   padding-left: 14px;
@@ -441,8 +463,8 @@ div.item-list ul.pager li.pager-next, div.item-list ul.pager li.pager-last {
   width: 45px;
   height: 46px;
   position: absolute;
-  top: 35px;
-  right: 5px;
+  top: 47px;
+  right: 1px;
 }
 #main-content #search_tutorial form input[type="submit"] {
   position: relative;
@@ -451,8 +473,8 @@ div.item-list ul.pager li.pager-next, div.item-list ul.pager li.pager-last {
   padding: 0;
   border: 0;
   text-indent: -999em;
-  height: 61px;
-  width: 60px;
+  height: 52px;
+  width: 52px;
 }
 #sidebar {
   width: 220px;
@@ -516,7 +538,7 @@ div.item-list ul.pager li.pager-next, div.item-list ul.pager li.pager-last {
   font-size: 12px;
   color: #666;
 }
-.featured-videos div.content ul li div.con p.tname {
+.featured-videos div.content ul li div.con p.tname, .featured-videos div.content ul li div.con p.tname a {
   font-size: 16px;
 }
 .featured-videos div.content ul li p {
@@ -535,7 +557,18 @@ div.item-list ul.pager li.pager-next, div.item-list ul.pager li.pager-last {
 #footer {
   clear: both;
   width: 1024px;
-  height: 50px;
+  background: #f0f0f0;
+}
+#footer #footer-message {
+  display: none;
+}
+#footer div.content {
+  text-align: center;
+  color: #666;
+}
+#footer div.content p {
+  margin: 0px;
+  padding: 10px 0;
 }
 /* jcarousel */
 .jcarousel-container-horizontal {
@@ -555,7 +588,7 @@ div.item-list ul.pager li.pager-next, div.item-list ul.pager li.pager-last {
   width: 30px;
   height: 30px;
   left: 0;
-  top: 0px;
+  top: 2px;
   position: absolute;
   background: url("../images/foss-left-right-arrow.png");
   background-position: 0 -14px;
@@ -567,7 +600,7 @@ div.item-list ul.pager li.pager-next, div.item-list ul.pager li.pager-last {
   width: 30px;
   height: 30px;
   right: 0;
-  top: 0px;
+  top: 2px;
   position: absolute;
   background: url("../images/foss-left-right-arrow.png");
   background-position: -31px -14px;
@@ -576,6 +609,7 @@ div.item-list ul.pager li.pager-next, div.item-list ul.pager li.pager-last {
   background-position: -31px -14px;
 }
 div.carousel .jcarousel-container-horizontal .jcarousel-prev {
+  top: 0px;
   width: 30px;
   height: 50px;
   background: url("../images/foss-left-right-arrow.png");
@@ -585,6 +619,7 @@ div.carousel .jcarousel-container-horizontal .jcarousel-prev.jcarousel-prev-disa
   background-position: 0px 0;
 }
 div.carousel .jcarousel-container-horizontal .jcarousel-next {
+  top: 0px;
   width: 30px;
   height: 50px;
   position: absolute;

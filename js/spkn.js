@@ -36,9 +36,11 @@ jQuery(document).ready(function() {
 		$(this).removeClass('hover');
 	});
     $('.jcarousel').jcarousel({
-        auto: 3,
-        wrap: 'last',
-        initCallback: mycarousel_initCallback
+    	   "wrap" : "circular",
+         "auto": 3,
+         "animation" : "slow",
+         "scroll": 3,
+         "initCallback": mycarousel_initCallback
     });
    
    /*
